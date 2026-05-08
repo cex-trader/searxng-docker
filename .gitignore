@@ -1,0 +1,5 @@
+.env
+
+# Docker volumes
+searxng-data/
+redis-data/

@@ -1,0 +1,6 @@
+# SearXNG rate limiter configuration
+# 本地部署，限制放宽
+
+[botdetection.ip_limit]
+# 每个 IP 的请求限制
+link_token = false

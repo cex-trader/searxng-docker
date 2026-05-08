@@ -1,0 +1,65 @@
+engines:
+- disabled: false
+  engine: google
+  name: google
+  shortcut: g
+- disabled: false
+  engine: bing
+  name: bing
+  shortcut: b
+- disabled: false
+  engine: duckduckgo
+  name: duckduckgo
+  shortcut: ddg
+- disabled: false
+  engine: wikipedia
+  name: wikipedia
+  shortcut: wp
+- disabled: false
+  engine: github
+  name: github
+  shortcut: gh
+- disabled: false
+  engine: stackoverflow
+  name: stackoverflow
+  shortcut: st
+- disabled: false
+  engine: arxiv
+  name: arxiv
+  shortcut: arx
+general:
+  contact_url: false
+  debug: false
+  donation_url: false
+  enable_metrics: true
+  instance_name: SearXNG
+  privacypolicy_url: false
+outgoing:
+  max_request_timeout: 15.0
+  proxies:
+    all://:
+    - socks5h://192.168.101.20:1080
+    - http://192.168.101.20:8123
+  request_timeout: 5.0
+  using_tor_proxy: false
+redis:
+  url: redis://redis:6379/0
+search:
+  autocomplete: google
+  default_lang: zh-CN
+  formats:
+  - html
+  - json
+  safe_search: 0
+server:
+  bind_address: 0.0.0.0
+  image_proxy: true
+  limiter: false
+  port: 8080
+  secret_key: b7a076533f74299952884eaf7e95732df3278a0f062d62c0125b0a31e0ae79b6
+ui:
+  default_theme: simple
+  static_use_hash: true
+  theme_args:
+    simple_style: auto
+use_default_settings: true
