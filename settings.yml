@@ -1,65 +1,64 @@
-engines:
-- disabled: false
-  engine: google
-  name: google
-  shortcut: g
-- disabled: false
-  engine: bing
-  name: bing
-  shortcut: b
-- disabled: false
-  engine: duckduckgo
-  name: duckduckgo
-  shortcut: ddg
-- disabled: false
-  engine: wikipedia
-  name: wikipedia
-  shortcut: wp
-- disabled: false
-  engine: github
-  name: github
-  shortcut: gh
-- disabled: false
-  engine: stackoverflow
-  name: stackoverflow
-  shortcut: st
-- disabled: false
-  engine: arxiv
-  name: arxiv
-  shortcut: arx
+use_default_settings: true
+
 general:
-  contact_url: false
   debug: false
-  donation_url: false
-  enable_metrics: true
-  instance_name: SearXNG
+  instance_name: "SearXNG"
   privacypolicy_url: false
-outgoing:
-  max_request_timeout: 15.0
-  proxies:
-    all://:
-    - socks5h://192.168.101.20:1080
-    - http://192.168.101.20:8123
-  request_timeout: 5.0
-  using_tor_proxy: false
-redis:
-  url: redis://redis:6379/0
+  donation_url: false
+  contact_url: false
+  enable_metrics: true
+
 search:
-  autocomplete: google
-  default_lang: zh-CN
-  formats:
-  - html
-  - json
   safe_search: 0
+  autocomplete: "google"
+  default_lang: "zh-CN"
+  formats:
+    - html
+    - json
+
 server:
-  bind_address: 0.0.0.0
-  image_proxy: true
+  secret_key: "b7a076533f74299952884eaf7e95732df3278a0f062d62c0125b0a31e0ae79b6"
   limiter: false
+  image_proxy: true
   port: 8080
-  secret_key: b7a076533f74299952884eaf7e95732df3278a0f062d62c0125b0a31e0ae79b6
+  bind_address: "0.0.0.0"
+
+redis:
+  url: "redis://redis:6379/0"
+
 ui:
-  default_theme: simple
   static_use_hash: true
+  default_theme: simple
   theme_args:
     simple_style: auto
-use_default_settings: true
+
+engines:
+  - name: google
+    engine: google
+    shortcut: g
+    disabled: false
+
+  - name: bing
+    engine: bing
+    shortcut: b
+    disabled: false
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wp
+    disabled: false
+
+  - name: github
+    engine: github
+    shortcut: gh
+    disabled: false
+
+  - name: arxiv
+    engine: arxiv
+    shortcut: arx
+    disabled: false
